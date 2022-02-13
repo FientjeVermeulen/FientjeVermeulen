@@ -24,7 +24,6 @@
     #ticker {
       text-transform: uppercase;
       font-family: sans-serif;
-      font-size: 20vh;
       line-height: 50vh;
       width: 100vw;
       height: 100vh;
@@ -38,34 +37,40 @@
     #ticker > * {
       white-space: nowrap;
       overflow: visible;
-      animation-duration: 1500ms;
+      animation-duration: 3000ms;
     }
 
     @keyframes slidefromright {
-      from {
+      0% {
         transform: translateX(100vw);
       }
 
-      to {
+      50% {
         transform: translateX(0);
       }
     }
     @keyframes slidefromleft {
-      from {
+      0% {
         transform: translateX(-100vw);
       }
 
-      to {
+      50% {
+        transform: translateX(-100vw);
+      }
+
+      100% {
         transform: translateX(0);
       }
     }
 
     @media (orientation: landscape) {
       #top {
+	font-size: 12vw;
         animation-name: slidefromright;
       }
 
       #bottom {
+	font-size: 12vw;
         align-self: flex-end;
         animation-name: slidefromleft;
       }
